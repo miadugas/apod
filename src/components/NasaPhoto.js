@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
-//import NavBar from "./NavBar";
+import NavBar from "./NavBar";
 
-// const apiKey = process.env.REACT_APP_NASA_KEY;
+// .env
+const apiKey = process.env.REACT_APP_NASA_KEY;
 
 export default function NasaPhoto() {
     const [photoData, setPhotoData] = useState(null);
 
     // Grab the pic from the API
-     useEffect(() => {
-         fetchPhoto();
+        useEffect(() => {
+        fetchPhoto();
     
         async function fetchPhoto() {
           const res = await fetch(
-            `https://api.nasa.gov/planetary/apod?api_key=`
+            `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
           );
            const data = await res.json();
            //setting state 
@@ -23,12 +24,10 @@ export default function NasaPhoto() {
 
       if (!photoData) return <div />;
 
-
  return (
      <>
-     {/* <NavBar /> */}
-    {/* <div className="nasa-photo"> */}
-    <div>
+     <NavBar />
+    <div className="nasa-photo">
        {photoData.media_type === "image" ? (
         <img
           src={photoData.url}
@@ -55,4 +54,4 @@ export default function NasaPhoto() {
      </div>
      </>
    );
-       }
+  }
