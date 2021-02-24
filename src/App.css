@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&display=swap');
 
 body {
-  font-family: 'Righteous', cursive;
   color: #d14f4f;
   line-height: 1.7;
   font-size: 19px;
+  font-family: 'Righteous', cursive;
   background-color: #222222;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424242' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  
 }
-
+ 
 /* navbar ---------- */
 
 .navbar {
   background-color: rgba(22, 22, 22, 0.8);
   display: flex;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .link {
@@ -27,8 +29,9 @@ body {
 }
 
 .link:hover {
-  color: #f59494;
-  transform: scale(1.1);
+  color: #8945c9;
+  transform: scale(1.2);
+
 }
 
 /* nasa photo ---------- */
@@ -74,25 +77,53 @@ body {
 }
 
 .home {
+  position: relative;
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .home-link {
+  position: relative;
   font-size: 40px;
-  background: #f59494;
   display: inline-block;
   padding: 40px 80px;
   color: #fff;
   border-radius: 50%;
   text-decoration: none;
-  transition: 0.3s ease all;
+  transition: 0.5s ease all;
+  z-index: 10000;
+  mix-blend-mode: overlay;
   text-transform: uppercase;
 }
 
 .home-link:hover {
-  border-radius: 5px;
-  background: #e77171;
+  color: #8945c9;
+  transform: scale(1.2);
+  mix-blend-mode: normal;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:max-content;
+}
+
+.nasa-vid { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.Mel {
+  font-size: x-small;
+}
+
+.footer {
+  justify-content: center;
+  text-align: center;
 }
