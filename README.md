@@ -1,4 +1,5 @@
 # Nasa APOD
+NASA APOD(Astronomy Picture of the Day) API
 
 ## Running the Application
 Run npm install to install the dependencies.
@@ -11,3 +12,7 @@ REACT_APP_NASA_KEY="Your API Key here!"
 
 Run npm start and navigate to localhost:3000 to view the app!
 
+
+
+## Technology Used
+ReactJS, React Hooks, React Player, HTML5 & CSS3
