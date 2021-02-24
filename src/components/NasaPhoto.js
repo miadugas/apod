@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 
 // .env
-const apiKey = process.env.REACT_APP_NASA_KEY;
+// const apiKey = process.env.REACT_APP_NASA_KEY;
 
 export default function NasaPhoto() {
     const [photoData, setPhotoData] = useState(null);
